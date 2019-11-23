@@ -420,6 +420,6 @@ class TomlBuilder
 
     private function isUnquotedKey(string $key) : bool
     {
-        return \preg_match('/^([-A-Z_a-z0-9]+)$/', $key) === 1;
+        return \preg_match('/^([-A-Z_a-z0-9$]+)$/', $key) === 1;
     }
 }
