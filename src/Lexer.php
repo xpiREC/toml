@@ -47,7 +47,7 @@ class Lexer implements LexerInterface
             '/^(\})/' => 'T_RIGHT_CURLY_BRACE',
             '/^(,)/' => 'T_COMMA',
             '/^(\.)/' => 'T_DOT',
-            '/^([-A-Z_a-z0-9]+)/' => 'T_UNQUOTED_KEY',
+            '/^([-A-Z_a-z0-9$]+)/' => 'T_UNQUOTED_KEY',
             '/^(\\\(b|t|n|f|r|"|\\\\|u[0-9AaBbCcDdEeFf]{4,4}|U[0-9AaBbCcDdEeFf]{8,8}))/' => 'T_ESCAPED_CHARACTER',
             '/^(\\\)/' => 'T_ESCAPE',
             '/^([\x{20}-\x{21}\x{23}-\x{26}\x{28}-\x{5A}\x{5E}-\x{10FFFF}]+)/u' => 'T_BASIC_UNESCAPED',
